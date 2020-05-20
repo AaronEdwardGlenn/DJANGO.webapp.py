@@ -18,8 +18,11 @@ posts = [
 
 
 def home(request):
-    return render(request, 'blog/home.html')
+    context = {
+        'posts': posts
+    }
+    return render(request, 'blog/home.html', context)
 
 
 def about(request):
-    return HttpResponse('<h1>About</h1>')
+    return HttpResponse('<h1>About</h1>', {'title': 'about'})
