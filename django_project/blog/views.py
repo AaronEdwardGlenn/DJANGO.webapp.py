@@ -17,7 +17,7 @@ class PostListView(ListView):
     ordering = ['-date_posted']
 
 
-class PostDetailView(ListView):
+class PostDetailView(DetailView):
     model = Post
 
 
